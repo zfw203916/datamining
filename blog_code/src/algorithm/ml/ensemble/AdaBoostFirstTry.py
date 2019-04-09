@@ -29,7 +29,7 @@ loss：这个只在回归中用到，不解释了
 n_estimator:最大迭代次数，默认50。在实际调参过程中，常常将n_estimator和学习率learning_rate一起考虑
 learning_rate:每个弱分类器的权重缩减系数v。f_k(x)=f_{k-1}*a_k*G_k(x)。较小的v意味着更多的迭代次数，默认是1，也就是v不发挥作用。
 另外的弱分类器的调参，弱分类器不同则参数不同，这里不详细叙述
-'''
+'''1
 #构建模型
 clf=AdaBoostClassifier(n_estimators=100)  #弱分类器个数设为100
 scores=cross_val_score(clf,iris.data,iris.target)
